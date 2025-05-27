@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section id="about" className="py-16 px-4 bg-gray-100 text-gray-900">
+    <section id="about" className="py-16 bg-blue-100 text-gray-900">
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
@@ -72,7 +72,7 @@ const About = () => {
           <a
             href="/path-to-your-cv.pdf"
             download
-            className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded hover:bg-blue-700 transition duration-300"
+            className="inline-block bg-gray-600 text-white font-semibold px-6 py-3 rounded hover:bg-blue-700 transition duration-300"
           >
             Download CV
           </a>
