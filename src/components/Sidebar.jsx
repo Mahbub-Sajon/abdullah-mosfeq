@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { IoIosHome } from "react-icons/io";
-import { FaUserAlt } from "react-icons/fa";
-import { FaFileCode } from "react-icons/fa";
-import { FaBook } from "react-icons/fa";
-import { FaFolder } from "react-icons/fa";
+import {
+  FaUserAlt,
+  FaFileCode,
+  FaBook,
+  FaFolder,
+  FaFacebookF,
+} from "react-icons/fa";
 import { IoMailUnreadSharp } from "react-icons/io5";
-import { MdMenuOpen } from "react-icons/md";
-import { MdCancel } from "react-icons/md";
-
+import { MdMenuOpen, MdCancel } from "react-icons/md";
+import { FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
 import { Link } from "react-scroll";
 
 const navItems = [
@@ -25,22 +27,62 @@ const Sidebar = () => {
   return (
     <div>
       {/* Desktop Sidebar */}
-      <aside className="hidden md:flex flex-col fixed top-0 left-0 h-full w-60 bg-gray-900 text-white p-6 shadow-lg z-20">
-        <h1 className="text-2xl font-bold mb-8">Mosfeq</h1>
-        <nav className="space-y-4">
-          {navItems.map((item) => (
-            <Link
-              key={item.id}
-              to={item.id}
-              smooth={true}
-              duration={500}
-              className="flex items-center gap-3 cursor-pointer hover:text-blue-400 transition"
-            >
-              {item.icon}
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+      <aside className="hidden md:flex flex-col justify-between fixed top-0 left-0 h-full w-60 bg-gray-900 text-white p-6 shadow-lg z-20">
+        <div>
+          <h1 className="text-2xl font-bold mb-8">Mosfeq</h1>
+          <nav className="space-y-4">
+            {navItems.map((item) => (
+              <Link
+                key={item.id}
+                to={item.id}
+                smooth={true}
+                duration={500}
+                className="flex items-center gap-3 cursor-pointer hover:text-blue-400 transition"
+              >
+                {item.icon}
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+
+        {/* Social Icons */}
+        <div className="flex justify-center gap-4 mt-8">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-500 transition"
+            aria-label="Facebook"
+          >
+            <FaFacebookF size={15} />
+          </a>
+          <a
+            href="https://x.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-500 transition"
+            aria-label="X (Twitter)"
+          >
+            <FaXTwitter size={15} />
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-500 transition"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedinIn size={15} />
+          </a>
+          <a
+            href="mailto:Abdullah.Mosfeq@cra-arc.gc.ca"
+            className="hover:text-blue-500 transition"
+            aria-label="Email"
+          >
+            <IoMailUnreadSharp size={15} />
+          </a>
+        </div>
       </aside>
 
       {/* Mobile Header */}

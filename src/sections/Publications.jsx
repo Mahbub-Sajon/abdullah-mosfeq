@@ -103,7 +103,7 @@ const Publications = () => {
           {filteredData.map((pub) => (
             <div
               key={pub.id}
-              className="bg-blue-50 rounded-xl shadow hover:shadow-lg transition-all duration-300 overflow-hidden"
+              className="bg-gray-100 rounded-xl shadow hover:shadow-lg transition-all duration-300 overflow-hidden"
             >
               <img
                 src={pub.image}
