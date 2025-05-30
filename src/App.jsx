@@ -1,10 +1,10 @@
 // Section Components
-// import Projects from "./sections/Projects";
 // import Contact from "./sections/Contact";
 
 import Sidebar from "./components/SideBar";
 import About from "./sections/About";
 import Home from "./sections/Home";
+import Projects from "./sections/Projects";
 import Publications from "./sections/Publications";
 import Skills from "./sections/Skills";
 
@@ -32,8 +32,8 @@ const App = () => {
           <Publications />
         </section>
 
-        <section id="projects" className="min-h-screen px-4 py-16 md:py-24">
-          {/* <Projects /> */}
+        <section id="projects" className="min-h-screen">
+          <Projects />
         </section>
 
         <section
