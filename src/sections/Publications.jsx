@@ -1,4 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import img1 from "../assets/publications/img1.jpg";
+import img2 from "../assets/publications/img2.jpg";
+import img3 from "../assets/publications/img3.jpg";
+import img4 from "../assets/publications/img4.jpg";
+import img5 from "../assets/publications/img5.jpg";
+import img6 from "../assets/publications/img6.jpg";
 
 const publicationsData = [
   {
@@ -6,7 +12,7 @@ const publicationsData = [
     title: "Annual Statistics Report 2024",
     description: "Detailed insights and key findings from national statistics.",
     category: "Statistics",
-    image: "https://via.placeholder.com/300x180",
+    image: img1,
     link: "https://www.canada.ca/en.html",
   },
   {
@@ -14,7 +20,7 @@ const publicationsData = [
     title: "Economic Performance Review",
     description: "Evaluation of economic growth trends across Canada.",
     category: "Statistics",
-    image: "https://via.placeholder.com/300x180",
+    image: img2,
     link: "https://www.canada.ca/en.html",
   },
   {
@@ -22,7 +28,7 @@ const publicationsData = [
     title: "2024 Health Sector Report",
     description: "Comprehensive review of the Canadian healthcare system.",
     category: "Reports",
-    image: "https://via.placeholder.com/300x180",
+    image: img3,
     link: "https://www.canada.ca/en.html",
   },
   {
@@ -30,7 +36,7 @@ const publicationsData = [
     title: "Environmental Statistics Overview",
     description: "Trends in environmental data and sustainability measures.",
     category: "Statistics",
-    image: "https://via.placeholder.com/300x180",
+    image: img4,
     link: "https://www.canada.ca/en.html",
   },
   {
@@ -38,7 +44,7 @@ const publicationsData = [
     title: "Public Service Delivery Report",
     description: "Efficiency and reach of public sector services in Canada.",
     category: "Reports",
-    image: "https://via.placeholder.com/300x180",
+    image: img5,
     link: "https://www.canada.ca/en.html",
   },
   {
@@ -46,7 +52,7 @@ const publicationsData = [
     title: "Population Trends and Analysis",
     description: "Analysis of demographic changes across regions.",
     category: "Statistics",
-    image: "https://via.placeholder.com/300x180",
+    image: img6,
     link: "https://www.canada.ca/en.html",
   },
 ];
@@ -78,8 +84,8 @@ const Publications = () => {
               onClick={() => setActiveTab(tab)}
               className={`px-4 py-2 rounded-xl text-sm font-medium transition ${
                 activeTab === tab
-                  ? "bg-blue-800 text-white"
-                  : "bg-white text-gray-700 hover:bg-blue-100"
+                  ? "bg-blue-900 text-white cursor-pointer"
+                  : "bg-white text-gray-700 hover:bg-gray-200 cursor-pointer"
               }`}
             >
               {tab}
@@ -94,7 +100,7 @@ const Publications = () => {
             placeholder="Search by title or category..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full sm:w-1/2 px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-1 "
+            className="w-full sm:w-1/2 px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-1 bg-gray-100"
           />
         </div>
 
@@ -103,16 +109,22 @@ const Publications = () => {
           {filteredData.map((pub) => (
             <div
               key={pub.id}
-              className="bg-gray-100 rounded-xl shadow hover:shadow-lg transition-all duration-300 overflow-hidden"
+              className="bg-gray-100 rounded-xl shadow hover:shadow-lg hover:bg-gray-200 transition-all duration-300 overflow-hidden"
             >
-              <img
-                src={pub.image}
-                alt={pub.title}
-                className="w-full h-40 object-cover"
-              />
+              <a href={pub.link} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={pub.image}
+                  alt={pub.title}
+                  className="w-full h-40 object-cover"
+                />
+              </a>
+
               <div className="p-4 space-y-2">
                 <h3 className="text-lg font-semibold">{pub.title}</h3>
                 <p className="text-sm text-gray-600">{pub.description}</p>
+                <p className="text-sm text-gray-600 font-bold">
+                  Category: {pub.category}
+                </p>
                 <a
                   href={pub.link}
                   target="_blank"

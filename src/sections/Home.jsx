@@ -39,7 +39,7 @@ const Home = () => {
           to="about"
           smooth={true}
           duration={500}
-          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded transition duration-300 cursor-pointer"
+          className="inline-block bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 px-6 rounded transition duration-300 cursor-pointer"
         >
           About Me
         </Link>

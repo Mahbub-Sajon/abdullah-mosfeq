@@ -1,46 +1,53 @@
 import React from "react";
+import img1 from "../assets/projects/mobile-app.png";
+import img2 from "../assets/projects/green-city.png";
+import img3 from "../assets/projects/policy-brief.png";
+import img4 from "../assets/projects/design-mockup.png";
+import img5 from "../assets/projects/youth-outreach.png";
+import img6 from "../assets/projects/clean-energy.png";
+import img7 from "../assets/projects/eco-friendly-architecture.png";
 
 const projects = [
   {
-    title: "Eco Initiative",
-    description: "A sustainability-driven project for greener cities.",
-    image:
-      "https://images.unsplash.com/photo-1581091870622-3c8aa5adf42e?auto=format&fit=crop&w=600&q=80",
-    link: "https://www.canada.ca/en.html",
-  },
-  {
     title: "Mobile App Launch",
     description: "Empowering users with modern tools for success.",
-    image:
-      "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=600&q=80",
-    link: "https://www.canada.ca/en.html",
-  },
-  {
-    title: "Policy Brief",
-    description: "Focused reports to guide data-informed decisions.",
-    image:
-      "https://images.unsplash.com/photo-1589820296156-d458a96d67ce?auto=format&fit=crop&w=600&q=80",
+    image: img1,
     link: "https://www.canada.ca/en.html",
   },
   {
     title: "Design Mockups",
     description: "Creative direction for outreach campaigns.",
-    image:
-      "https://images.unsplash.com/photo-1588776814546-b8553f4a3c8e?auto=format&fit=crop&w=600&q=80",
+    image: img4,
+    link: "https://www.canada.ca/en.html",
+  },
+  {
+    title: "Eco Initiative",
+    description: "A sustainability-driven project for greener cities.",
+    image: img2,
     link: "https://www.canada.ca/en.html",
   },
   {
     title: "Youth Outreach",
     description: "Engaging future leaders through interactive sessions.",
-    image:
-      "https://images.unsplash.com/photo-1564865878688-d8c6a85e9929?auto=format&fit=crop&w=600&q=80",
+    image: img5,
     link: "https://www.canada.ca/en.html",
   },
   {
     title: "Clean Energy Drive",
     description: "Promoting energy-efficient alternatives nationwide.",
-    image:
-      "https://images.unsplash.com/photo-1582191037150-8a03ff7481af?auto=format&fit=crop&w=600&q=80",
+    image: img6,
+    link: "https://www.canada.ca/en.html",
+  },
+  {
+    title: "Eco Friendly Architecture",
+    description: "Promoting eco friendly architecture alternatives nationwide.",
+    image: img7,
+    link: "https://www.canada.ca/en.html",
+  },
+  {
+    title: "Policy Brief",
+    description: "Focused reports to guide data-informed decisions.",
+    image: img3,
     link: "https://www.canada.ca/en.html",
   },
 ];
@@ -75,8 +82,8 @@ const Projects = () => {
                 className="w-full h-auto object-cover rounded-xl"
               />
 
-              {/* Fixed lighter overlay */}
-              <div className="absolute inset-0 bg-[rgba(0,0,0,0.7)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-[rgba(0,0,0,0.3)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
                 <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
                 <p className="text-sm">{project.description}</p>
               </div>

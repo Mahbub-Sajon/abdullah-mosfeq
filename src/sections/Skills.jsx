@@ -66,7 +66,7 @@ const Skills = () => {
   const tabClass = (value) =>
     `px-4 py-2 font-medium text-sm rounded-xl transition-all duration-300 ease-in-out w-full text-center cursor-pointer ${
       activeTab === value
-        ? "bg-white shadow text-blue-600 scale-105"
+        ? "bg-white shadow text-blue-800 scale-105"
         : "text-gray-600 hover:bg-gray-200"
     }`;
 

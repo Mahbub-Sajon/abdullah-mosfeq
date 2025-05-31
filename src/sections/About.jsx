@@ -112,7 +112,7 @@ const About = () => {
               <a
                 href="/path-to-your-cv.pdf"
                 download
-                className="inline-block bg-gray-700 text-white font-semibold px-6 py-3 rounded hover:bg-blue-700 transition duration-300"
+                className="inline-block bg-blue-900 text-white font-semibold px-6 py-3 rounded hover:bg-blue-950 transition duration-300"
               >
                 Download CV
               </a>
